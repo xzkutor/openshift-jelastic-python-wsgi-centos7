@@ -1,0 +1,13 @@
+#!/bin/bash -eu
+
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
+mkdir -p ${OPENSHIFT_PYTHON_DIR}/etc;
+
+[ -d /opt/jelastic-python27/lib/python2.7/site-packages/yum ] && rm -rf /opt/jelastic-python27/lib/python2.7/site-packages/yum;
+cp -r /usr/lib/python2.7/site-packages/yum /opt/jelastic-python27/lib/python2.7/site-packages/;
+
+echo "jelastic ALL=(ALL) NOPASSWD: /usr/sbin/setcap " >> /etc/sudoers;
+rm -f /etc/httpd/conf/httpd.conf;
+ln -sf /opt/repo/versions/2.4/etc/conf/httpd_nolog.conf /etc/httpd/conf/httpd.conf;
+sed -i '/ERRORS_TO_KBASE_ARTICLES.iteritems/d' /usr/share/yum-cli/output.py
