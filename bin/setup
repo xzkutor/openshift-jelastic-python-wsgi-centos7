@@ -13,4 +13,4 @@ ln -sf /opt/repo/versions/2.4/etc/conf/httpd_nolog.conf /etc/httpd/conf/httpd.co
 sed -i '/ERRORS_TO_KBASE_ARTICLES.iteritems/d' /usr/share/yum-cli/output.py
 
 yum -y install https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm &>/dev/null
-yum -y install postgresql95-devel &>/dev/null
+yum -y install postgresql95-devel-9.5.2 &>/dev/null
