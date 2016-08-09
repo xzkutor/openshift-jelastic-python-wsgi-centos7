@@ -16,3 +16,4 @@ yum -y install https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x
 yum -y install postgresql95-devel-9.5.2 &>/dev/null
 
 mv ${OPENSHIFT_PYTHON_DIR}/usr/lib64/apache/* /usr/lib64/mysql; strip /usr/lib64/mysql/*; rm -rf ${OPENSHIFT_PYTHON_DIR}/usr/lib64/apache/;
+chown root:root /usr/lib64/mysql/*
