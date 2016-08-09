@@ -14,3 +14,5 @@ sed -i '/ERRORS_TO_KBASE_ARTICLES.iteritems/d' /usr/share/yum-cli/output.py
 
 yum -y install https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm &>/dev/null
 yum -y install postgresql95-devel-9.5.2 &>/dev/null
+
+mv ${OPENSHIFT_PYTHON_DIR}/usr/lib64/apache/* /usr/lib64/mysql; strip /usr/lib64/mysql/*; rm -rf ${OPENSHIFT_PYTHON_DIR}/usr/lib64/apache/;
