@@ -6,7 +6,7 @@ Description: 'Python is a general-purpose, high-level programming language whose
   philosophy emphasizes code readability. Popular development frameworks include:
   Django, Bottle, Pylons, Zope and TurboGears.'
 Version: '2.4'
-Source-Url: https://github.com/jelastic-public-cartridges/openshift-jelastic-python-wsgi-centos7.git
+Source-Url: https://github.com/xzkutor/openshift-jelastic-python-wsgi-centos7.git
 License: The Python License, version 2.7-3.4
 License-Url: http://docs.python.org/3/license.html
 Vendor: python.org
